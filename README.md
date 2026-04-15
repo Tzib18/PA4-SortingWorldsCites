@@ -58,7 +58,11 @@ Performance Analysis
 I recorded the elapsed time for each algorithm and field below.
 
 Field	Insertion Sort (ms) |	Merge Sort (ms)
-population	[fill in]	| [69.989 ms]
-city	    [fill in]	| [109.274 ms]
-country	    [fill in]	| [107.129 ms]
-latitude	[fill in]	| [82.442 ms]
+population	[4.289 ms]	| [69.989 ms]
+city	    [38179.8 ms]	| [109.274 ms]
+country	    [29865.5 ms]	| [107.129 ms]
+latitude	[16907.2 ms]	| [82.442 ms]
+
+Reflection
+
+One of the biggest things I noticed in this assignment was just how much slower insertion sort became on a large real-world dataset. At first it almost looked like insertion sort was not working, but it was really just taking a very long time because of its time complexity. Merge sort was much faster across all of the fields, which matched what I expected from class since merge sort is O(n log n) and insertion sort is O(n^2). The sort field also seemed to matter, especially for fields like city and country, because comparing strings over and over feels heavier than comparing numbers like population or latitude. Overall, the results matched the theory pretty well, and the biggest surprise for me was just how dramatic the difference felt once I actually used both algorithms on about 48,000 cities instead of on a small practice example.
